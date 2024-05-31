@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Styles/estilos.css" type="text/css">
     <link rel="icon" href="Images/latumbadecouperin.png" />
-    <title>Partituras</title>
+    <title>Movimientos | Piano</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+    <script src="JavaScript/piano.js" defer></script>
 </head>
 <body>
-    <header>   <!-- Segundo contenedor que tiene los botones -->
+    <header> <!-- Segundo contenedor que tiene los botones -->
         <nav>
             <ul>
                 <li><a href="index.html"><button>Inicio</button></a></li>
@@ -21,23 +22,44 @@
         </nav>
     </header>
 
-    <main> <!-- Primer contenedor que abarca todo el body -->
-        <div class="grid-layout">
-            <div id="layout-header">
+    <dev class="partitura-container"> <!-- Primer contenedor que abarca todo el body -->
+        <section class="content">
+            <iframe id="pdf" src="Files/Le_Tombeau_de_Couperin_1918.pdf" frameborder = "0" ></iframe>
+        </section>
+
+        <section class="content">
+            <div class="wrapper">
+                <header>
+                    <h2>Playable PIANO</h2>
+                    <div class="column volume-slider">
+                        <span>Volume</span><input type="range" min="0" max="1" value="0.5" step="any">
+                    </div>
+                    <div class="column keys-checkbox">
+                        <span>Show Keys</span><input type="checkbox" checked>
+                    </div>
+                </header>
+
+                <ul class="piano-keys">
+                    <li class="key white" data-key="a"><span>a</span></li>
+                    <li class="key black" data-key="w"><span>w</span></li>
+                    <li class="key white" data-key="s"><span>s</span></li>
+                    <li class="key black" data-key="e"><span>e</span></li>
+                    <li class="key white" data-key="d"><span>d</span></li>
+                    <li class="key white" data-key="f"><span>f</span></li>
+                    <li class="key black" data-key="t"><span>t</span></li>
+                    <li class="key white" data-key="g"><span>g</span></li>
+                    <li class="key black" data-key="y"><span>y</span></li>
+                    <li class="key white" data-key="h"><span>h</span></li>
+                    <li class="key black" data-key="u"><span>u</span></li>
+                    <li class="key white" data-key="j"><span>j</span></li>
+                    <li class="key white" data-key="k"><span>k</span></li>
+                    <li class="key black" data-key="o"><span>o</span></li>
+                    <li class="key white" data-key="l"><span>l</span></li>
+                    <li class="key black" data-key="p"><span>p</span></li>
+                    <li class="key white" data-key=";"><span>;</span></li>
+                </ul>            
             </div>
-
-            <div id="layout-body">
-
-                <iframe src="Files/Le_Tombeau_de_Couperin_1918.pdf" frameborder = "0" ></iframe>
-
-            </div>
-
-            <div id="layout-footer">
-                <footer>
-                    <p>&copy; 2024 Le tombeau de Couperin_Web Site_Juan Esteban Bolivar. Todos los derechos reservados.</p>
-                </footer>
-            </div>
-        </div>
-    </main>
+        </section>
+    </dev>
 </body>
 </html>

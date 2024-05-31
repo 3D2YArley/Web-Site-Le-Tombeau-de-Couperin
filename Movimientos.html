@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Styles/estilos.css" type="text/css">
     <link rel="icon" href="Images/latumbadecouperin.png" />
     <title>Movimientos</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+    <audio class="audio" autoplay>
+        <source src="Audio/rigaudon.mp3" type="audio/mpeg">
+    </audio>
 </head>
 <body>
-    <header>   <!-- Segundo contenedor que tiene los botones -->
+    <header> <!-- Segundo contenedor que tiene los botones -->
         <nav>
             <ul>
                 <li><a href="index.html"><button>Inicio</button></a></li>
@@ -22,21 +25,22 @@
     </header>
 
     <main> <!-- Primer contenedor que abarca todo el body -->
-        <div class="grid-layout">
-            <div id="layout-header">
+        <section class="content">
+            <div class="sect_1">
+
             </div>
-
-            <div id="layout-body">
-                <section class="title">
+            <div class="sect_2">
+                <div class="title">
                     <h1>Le tombeau de Couperin</h1>
+                </div>
+                
+                <section class="imagen">
+                    <img id="imagen_1" src="Images/latumbadecouperin.png" alt="Le tombeau de Couperin sheet music cover" sizes="200">
                 </section>
-
-                <section>
-                    <img id="imagen_2" src="Images/latumbadecouperin.png" alt="Le tombeau de Couperin sheet music cover" sizes="200">
-                </section>
-
-                <section class="content">
-                    <h2>Movements</h2>
+            </div>
+            <div class="sect_3">
+                <h2>Movements</h2>
+                <nav>
                     <ul class="two-columns">
                         <li>Prélude</li>
                         <li>Forlane</li>
@@ -45,22 +49,9 @@
                         <li>Lent et douloureux</li>
                         <li>Toccata</li>
                     </ul>
-
-                        
-                    <footer>
-                        <audio class="audio" autoplay>
-                            <source src="Audio/rigaudon.mp3" type="audio/mpeg">
-                        </audio>
-                    </footer>
-                </section>
+                </nav>
             </div>
-
-            <div id="layout-footer">
-                <footer>
-                    <p>&copy; 2024 Le tombeau de Couperin_Web Site_Juan Esteban Bolivar. Todos los derechos reservados.</p>
-                </footer>
-            </div>
-        </div>
+        </section>
     </main>
 </body>
 </html>
