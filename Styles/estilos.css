@@ -1,155 +1,48 @@
+/* Reseteo básico de estilos */
 body {
-    background-image: url("../Images/fondo.jpeg"); /*Toamamos esta imagen para el fondo de la pagina */
-	background-size:cover; /*que ocupe toda la pagina */
-	background-repeat: no-repeat; /*que no se repita la imagen */
-	background-attachment: fixed; /*que no se mueva con el scroll */
-	background-position: center; /*centrar la imagen */
-    height: 1200px;
-    line-height: 1.6;
-    background-attachment: scroll;
-    margin: 30px 20px;
-    text-align: center;
+    background-color: #eccca4;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Oculta la barra de desplazamiento */
 }
 
 header {
+    padding: 0 0;
     background-color: transparent;
     text-align: right;
 }
 
 header nav ul {
+    padding: 0 0;
     list-style: none;
     padding: 0 10px  ;
     text-align: right;
 }
 
 header nav ul li {
+    padding: 0 0;
     display: inline;
 }
 
 header nav ul li a {
+    padding: 0 0;
     text-decoration: none;
     padding: 5px;
 }
 
 header nav ul li a button {
+    padding: 0 0;
     background-color: transparent;
     color: black;
     cursor: pointer;
     border: none;
-
-    font-size: 20px; /* Tamaño de letra 14 */
+    font-size: 18px; /* Tamaño de letra 14 */
     font-family: 'Times New Roman', Times, serif; /* Estilo Times New Roman */
 }
 
-main {
-    background-color: transparent;
-    margin: 100px 200px;
-    border: none;
-}
-
-.grid-layout {
-    background-color: transparent;
-    display: grid;
-    grid-template-columns: auto;
-    margin: 0 auto;
-    width: 80%;
-}
-
-#layout-header {
-    background-color: transparent;
-    height: 300px;
-    text-align: center;
-    padding: 10px;
-    line-height: 150px;
-    border: none;
-}
-
-#layout-body {
-    background-color: transparent;
-    height: 660px;
-    text-align: center;
-    align-items: center;
-}
-
-.title {
-    background-color: transparent;
-    height: 90px;
-    margin: 5px;
-    padding: 0;
-}
-
-.imagen {
-    background-color: transparent;
-    margin: 5px;
-    height: 320px;
-    padding: 0;
-}
-
-#imagen_1 {
-    width: 60%; /* Ancho fijo de la imagen */
-    height: auto; /* Altura automática para mantener la proporción */
-}
-
-#imagen_2 {
-    width: 320px; /* Ancho fijo de la imagen */
-    height: auto;
-    background-color: transparent;
-}
-
-.content {
-    background-color: transparent;
-    height: 280px;
-    padding: 0 25px;
-    align-items: center;
-    text-align: left;
-}
-
-.content nav ul {
-    color: black;
-    padding: 0 50px  ;
-    text-align: left;
-}
-
-.content footer {
-    background-color: transparent;
-    height: 55px;
-    text-align: center;
-}
-
-h1 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 35px;
-    text-align: center;
-    color: black;
-}
-
-h2 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 25px;
-    text-align: center;
-    color: black;
-}
-
-#layout-footer {
-    background-color: transparent;
-    height: 50px;
-    text-align: center;
-    margin: 5px;
-    align-items: center;
-}
-
-footer {
-    margin: 0;
-    font-size: 12px;
-    text-align: center;
-}
-
-/* Ocultar el reproductor de audio */
-#background-music {
-    display: none;
-}
-
-/* Estilo para dividir la lista en dos columnas */
 .two-columns {
     column-count: 2;
     column-gap: 20px; /* Ajusta el espacio entre las columnas según sea necesario */
@@ -157,12 +50,91 @@ footer {
 
 .two-columns li {
     break-inside: avoid;
+    font-size: 12px; /* Tamaño de letra 14 */
+    font-family: 'Times New Roman', Times, serif; /* Estilo Times New Roman */
+    text-decoration: none;
 }
 
-iframe {
-    display: block; /* Utiliza block para permitir márgenes automáticos */
-    margin: auto; /* Centra el iframe horizontalmente */
-    width: 80%; /* Ajusta el ancho al 80% del contenedor padre */
-    height: 650px; /* Ajusta la altura a tu preferencia */
-    border: none; /* Elimina el borde del iframe */
+
+/* Estilo para el contenido centrado */
+main {
+    align-items: center;
+    padding: 0 26%;
+    border: 1px solid black;
+}
+
+.content {
+    background-image: url("../Images/fondo1.png"), url("../Images/fondo2.png"); /* Dos imágenes de fondo */
+    background-size: cover; /* Que la imagen de fondo ocupe todo el main */
+    background-repeat: no-repeat; /* Que la imagen no se repita */
+    background-position: center; /* Centrar la imagen */
+    border: 1px solid rgb(105, 0, 243);
+    width: 100%;
+}
+
+.content .sect_1 {
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid rgb(236, 4, 4);
+    margin: 0 20%;
+    min-height: 30vh;
+}
+
+.content .sect_2 {
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid rgb(236, 4, 4);
+    margin: 0 20%;
+    min-height: 32vh;
+}
+
+.content .sect_3 {
+    align-items: center;
+    text-align: left;
+    background-color: transparent;
+    border: 1px solid rgb(60, 10, 124);
+    margin: 0 20%;
+    min-height: 23.5vh;
+}
+
+.content .sect_2 .title {
+    text-align: center;
+    border: 1px solid rgb(229, 250, 38);
+}
+
+.content .sect_2 .imagen {
+    align-self: center;
+    border: 1px solid green;
+}
+
+#imagen_1 {
+    border: 1px solid rgb(2, 49, 2);
+    width: 49%; /* Ancho fijo de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 19px;
+    text-align: center;
+    color: black;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    text-align: center;
+    color: black;
+}
+
+audio {
+    display: none;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+
 }

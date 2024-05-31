@@ -1,0 +1,299 @@
+/* Reseteo básico de estilos */
+body {
+    background-color: #eccca4;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Oculta la barra de desplazamiento */
+}
+
+header {
+    padding: 0 0;
+    background-color: transparent;
+    text-align: right;
+}
+
+header nav ul {
+    padding: 0 0;
+    list-style: none;
+    padding: 0 10px  ;
+    text-align: right;
+}
+
+header nav ul li {
+    padding: 0 0;
+    display: inline;
+}
+
+header nav ul li a {
+    padding: 0 0;
+    text-decoration: none;
+    padding: 5px;
+}
+
+header nav ul li a button {
+    padding: 0 0;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    border: none;
+    font-size: 18px; /* Tamaño de letra 14 */
+    font-family: 'Times New Roman', Times, serif; /* Estilo Times New Roman */
+}
+
+.two-columns {
+    column-count: 2;
+    column-gap: 20px; /* Ajusta el espacio entre las columnas según sea necesario */
+}
+
+.two-columns li {
+    break-inside: avoid;
+    font-size: 12px; /* Tamaño de letra 14 */
+    font-family: 'Times New Roman', Times, serif; /* Estilo Times New Roman */
+    text-decoration: none;
+}
+
+
+/* Estilo para el contenido centrado */
+main {
+    align-items: center;
+    padding: 0 26%;
+    border: 1px solid black;
+}
+
+main .content {
+    background-image: url("../Images/fondo1.png"), url("../Images/fondo2.png"); /* Dos imágenes de fondo */
+    background-size: cover; /* Que la imagen de fondo ocupe todo el main */
+    background-repeat: no-repeat; /* Que la imagen no se repita */
+    background-position: center; /* Centrar la imagen */
+    border: 1px solid rgb(105, 0, 243);
+    width: 100%;
+}
+
+.content .sect_1 {
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid rgb(236, 4, 4);
+    margin: 0 20%;
+    min-height: 30vh;
+}
+
+.content .sect_2 {
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid rgb(236, 4, 4);
+    margin: 0 20%;
+    min-height: 32vh;
+}
+
+.content .sect_3 {
+    align-items: center;
+    text-align: left;
+    background-color: transparent;
+    border: 1px solid rgb(60, 10, 124);
+    margin: 0 20%;
+    min-height: 23.5vh;
+}
+
+.content .sect_2 .title {
+    text-align: center;
+    border: 1px solid rgb(229, 250, 38);
+}
+
+.content .sect_2 .imagen {
+    align-self: center;
+    border: 1px solid green;
+}
+
+#imagen_1 {
+    border: 1px solid rgb(2, 49, 2);
+    width: 49%; /* Ancho fijo de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 19px;
+    text-align: center;
+    color: black;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    text-align: center;
+    color: black;
+}
+
+audio {
+    display: none;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+
+/* Estilos de página partitura. */
+.partitura-container {
+    display: flex; /* Cambia el layout a flexbox */
+    align-items: center;
+    border: 1px solid rgb(23, 199, 170);
+    padding: 0 0;
+}
+
+.partitura-container .content {
+    border: none;
+    min-height: 90vh;
+    margin: 0 1%;
+    width: 100%;
+}
+
+#pdf {
+    min-height: 89vh;
+    width: 100%;
+}
+
+
+
+
+
+/* Código de piano */
+.partitura-container .wrapper {
+    padding: 35px 40px;
+    border-radius: 20px;
+    background: #141414;
+}
+.wrapper header {
+    display: flex;
+    color: #B2B2B2;
+    align-items: center;
+    justify-content: space-between;
+}
+header input {
+    outline: none;
+    border-radius: 30px;
+}
+.volume-slider input {
+    accent-color: #fff;
+}
+.keys-checkbox input {
+    height: 30px;
+    width: 60px;
+    cursor: pointer;
+    appearance: none;
+    position: relative;
+    background: #4B4B4B
+}
+.keys-checkbox input::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #8c8c8c;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+.keys-checkbox input:checked::before {
+    left: 35px;
+    background: #fff;
+}
+.piano-keys {
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+}
+.piano-keys .key {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    text-transform: uppercase;
+}
+.piano-keys .black {
+    z-index: 2;
+    width: 44px;
+    height: 110px;
+    margin: 0 -22px 0 -22px;
+    border-radius: 0 0 5px 5px;
+    background: linear-gradient(#333, #000);
+}
+.piano-keys .black.active {
+    box-shadow: inset -5px -10px 10px rgba(255,255,255,0.1);
+    background:linear-gradient(to bottom, #000, #434343);
+}
+.piano-keys .white {
+    height: 200px;
+    width: 55px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    background: linear-gradient(#fff 96%, #eee 4%);
+}
+.piano-keys .white.active {
+    box-shadow: inset -5px 5px 20px rgba(0,0,0,0.2);
+    background:linear-gradient(to bottom, #fff 0%, #eee 100%);
+}
+.piano-keys .key span {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    color: #A2A2A2;
+    font-size: 1.13rem;
+    text-align: center;
+}
+.piano-keys .key.hide span {
+    display: none;
+}
+.piano-keys .black span {
+    bottom: 13px;
+    color: #888888;
+}
+@media screen and (max-width: 815px) {
+    .wrapper {
+      padding: 25px;
+    }
+    header {
+      flex-direction: column;
+    }
+    header :where(h2, .column) {
+      margin-bottom: 13px;
+    }
+    .volume-slider input {
+      max-width: 100px;
+    }
+    .piano-keys {
+      margin-top: 20px;
+    }
+    .piano-keys .key:where(:nth-child(9), :nth-child(10)) {
+      display: none;
+    }
+    .piano-keys .black {
+      height: 100px;
+      width: 40px;
+      margin: 0 -20px 0 -20px;
+    }
+    .piano-keys .white {
+      height: 180px;
+      width: 60px;
+    }
+  }
+  @media screen and (max-width: 615px) {
+    .piano-keys .key:nth-child(13),
+    .piano-keys .key:nth-child(14),
+    .piano-keys .key:nth-child(15),
+    .piano-keys .key:nth-child(16),
+    .piano-keys .key :nth-child(17) {
+      display: none;
+    }
+    .piano-keys .white {
+      width: 50px;
+    }
+  }
+  
