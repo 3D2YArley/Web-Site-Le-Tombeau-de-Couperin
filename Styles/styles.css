@@ -10,9 +10,12 @@ body {
 }
 
 header {
-    background-color: transparent;
+    padding: 0.1px;
+    background-color: #e9c395;
     text-align: right;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añadir sombra al borde */
 }
+
 
 header nav ul {
     list-style: none;
@@ -41,7 +44,6 @@ header nav ul li a button {
 
 /* Estilo para el contenido centrado */
 main {
-    z-index: 2; /* Asegura que el contenido esté por encima del PDF */
     padding: 0 26%;
     display: flex;
     justify-content: center;
@@ -82,6 +84,23 @@ main {
 /* Estilo para que el texto de los enlaces sea negro */
 .scroll nav ul li a {
     color: black;
+    text-decoration: none; /* Quitar subrayado */
+}
+
+/* Estilizar el scroll en navegadores WebKit */
+.content .scroll::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+.content .scroll::-webkit-scrollbar-track {
+    background: #e0e0e0; /* Color del fondo de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.content .scroll::-webkit-scrollbar-thumb {
+    background-color: #eccca4; /* Color de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 3px solid #e0e0e0; /* Espacio alrededor de la barra de desplazamiento */
 }
 
 .imagen img {
@@ -164,45 +183,232 @@ p {
 
 /* Estilos de página partitura. */
 .main2 {
-    padding: 0 21%;
     display: flex;
     min-height: 92vh;
 }
 
-.content2 {
-    background-image: url("../Images/2.png"), url("../Images/1.png"); /* Dos imágenes de fondo */
+.content1 {
+    position: relative; /* Permite posicionar los elementos hijos relativamente */
+    background-image: url("../Images/fondo1.png"), url("../Images/fondo2.png"); /* Dos imágenes de fondo */
     background-size: cover; /* Que la imagen de fondo ocupe todo el main */
     background-repeat: no-repeat; /* Que la imagen no se repita */
     background-position: center; /* Centrar la imagen */
+    min-height: 90vh;
     width: 100%;
-    max-width: 1200px;
+    margin-top: 2px;
+    margin-left: 13px;
+    margin-right: 13px;
+
 }
 
 .partitura {
     display: flex; /* Cambia el layout a flexbox */
-    margin-top: 33%;
-    margin-left: 25%;
-    margin-right: 25%;
+    width: auto;
+    min-height: 68vh;
+    padding-top: 19vh;
+    padding-bottom: 5vh;
+    padding-left: 9vh;
+    padding-right: 9vh;
 }
 
-#pdf {
-    min-height: 50vh;
+.partitura #pdf {
     width: 100%;
 }
 
-
-/* Estilizar el scroll en navegadores WebKit */
-.content .scroll::-webkit-scrollbar {
-    width: 12px; /* Ancho de la barra de desplazamiento */
+.content2 {
+    background-image: url("../Images/fondo-back.jpg"); /* Dos imágenes de fondo */
+    background-size: cover; /* Que la imagen de fondo ocupe todo el main */
+    background-repeat: no-repeat; /* Que la imagen no se repita */
+    background-position: center; /* Centrar la imagen */
+    min-height: 90vh;
+    width: 100%;
+    
+    display: flex; /* Utiliza Flexbox */
+    flex-direction: column; /* Coloca los hijos en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
 }
 
-.content .scroll::-webkit-scrollbar-track {
-    background: #e0e0e0; /* Color del fondo de la barra de desplazamiento */
-    border-radius: 10px; /* Bordes redondeados */
+
+
+
+/* Código del piano */
+.wrapper {
+    width: 85%;
+    padding: 10px 6px;
+    border-radius: 20px;
+    background: #141414;
+}
+.wrapper header {
+    background: #141414;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    color: #B2B2B2;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+header h2 {
+    font-size: 1.6rem;
+    color: #e0e0e0;
+}
+header .column {
+    display: flex;
+    align-items: center;
+}
+header span {
+    font-weight: 500;
+    margin-right: 15px;
+    font-size: 1.19rem;
+}
+header input {
+    outline: none;
+    border-radius: 6px; /* Añadir borde redondeado */
+}
+.volume-slider input[type="range"] {
+    -webkit-appearance: none; /* Eliminar estilo predeterminado en Chrome/Safari */
+    appearance: none; /* Eliminar estilo predeterminado en otros navegadores */
+    width: 100%;
+    background: transparent;
+    cursor: pointer;
+    background: #4B4B4B;
+
 }
 
-.content .scroll::-webkit-scrollbar-thumb {
-    background-color: #eccca4; /* Color de la barra de desplazamiento */
-    border-radius: 10px; /* Bordes redondeados */
-    border: 3px solid #e0e0e0; /* Espacio alrededor de la barra de desplazamiento */
+.volume-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Hacer el thumb redondeado */
+    background: #ffffff;
+    cursor: pointer;
 }
+
+.volume-slider input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Hacer el thumb redondeado */
+    cursor: pointer;
+}
+.keys-checkbox input {
+    height: 30px;
+    width: 60px;
+    cursor: pointer;
+    appearance: none;
+    position: relative;
+    background: #4B4B4B;
+    border-radius: 15px; /* Hacer el contenedor del checkbox redondeado */
+    transition: background 0.3s ease;
+}
+
+.keys-checkbox input::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Hacer el círculo del checkbox redondeado */
+    background: #8c8c8c;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.keys-checkbox input:checked::before {
+    left: 35px;
+    background: #fff;
+}
+
+.piano-keys {
+    display: flex;
+    list-style: none;
+    margin-top: 10px;
+}
+.piano-keys .key {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    text-transform: uppercase;
+}
+.piano-keys .black {
+    z-index: 2;
+    width: 30px;
+    height: 110px;
+    margin: 0 -22px 0 -22px;
+    border-radius: 0 0 5px 5px;
+    background: linear-gradient(#333, #000);
+}
+.piano-keys .black.active {
+    box-shadow: inset -5px -10px 10px rgba(255,255,255,0.1);
+    background:linear-gradient(to bottom, #000, #434343);
+}
+.piano-keys .white {
+    height: 180px;
+    width: 60px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: linear-gradient(#fff 96%, #eee 4%);
+}
+.piano-keys .white.active {
+    box-shadow: inset -5px 5px 20px rgba(0,0,0,0.2);
+    background:linear-gradient(to bottom, #fff 0%, #eee 100%);
+}
+.piano-keys .key span {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    color: #A2A2A2;
+    font-size: 1.13rem;
+    text-align: center;
+}
+.piano-keys .key.hide span {
+    display: none;
+}
+.piano-keys .black span {
+    bottom: 13px;
+    color: #888888;
+}
+
+@media screen and (max-width: 815px) {
+    .wrapper {
+        padding: 25px;
+    }
+    header {
+        flex-direction: column;
+    }
+    header :where(h2, .column) {
+        margin-bottom: 13px;
+    }
+    .volume-slider input {
+        max-width: 100px;
+    }
+    .piano-keys {
+        margin-top: 20px;
+    }
+    .piano-keys .key:where(:nth-child(9), :nth-child(10)) {
+        display: none;
+    }
+    .piano-keys .black {
+        height: 100px;
+        width: 40px;
+        margin: 0 -20px 0 -20px;
+    }
+    .piano-keys .white {
+        height: 180px;
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 615px) {
+    .piano-keys .key:nth-child(13),
+    .piano-keys .key:nth-child(14),
+    .piano-keys .key:nth-child(15),
+    .piano-keys .key:nth-child(16),
+    .piano-keys .key :nth-child(17) {
+        display: none;
+    }
+    .piano-keys .white {
+        width: 50px;
+    }
+  }
