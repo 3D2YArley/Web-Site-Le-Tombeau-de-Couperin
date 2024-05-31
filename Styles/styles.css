@@ -43,18 +43,31 @@ header nav ul li a button {
 
 /* Estilo para el contenido centrado */
 main {
-    padding: 0 26%;
+    padding: 0 17%;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 90vh;
+    margin-top: 3px;
+
+}
+
+.background-content {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Añadir sombra al borde */
+    background-image: url("../Images/1.png"); /* Dos imágenes de fondo */
+    background-size: cover; /* Que la imagen de fondo ocupe todo el main */
+    background-repeat: no-repeat; /* Que la imagen no se repita */
+    background-position: center; /* Centrar la imagen */
+    padding: 0 16%;
+    min-height: 92vh;
 }
 
 .content {
+    border: none;
     position: relative; /* Para que los elementos posicionados absolutamente estén relativos a .content */
     width: 100%;
     max-width: 1200px;
-    padding: 20px;
+    padding: 30px;
     box-sizing: border-box;
     overflow: hidden; /* Para asegurarse de que el contenido adicional no salga del contenedor */
 }
@@ -65,20 +78,43 @@ main {
     left: 0;
     width: 100%;
     height: 100%; /* Asegura que el contenedor abarque todo el contenedor padre */
-    z-index: -1; /* Para que el contenedor de las imágenes de fondo esté detrás del contenido */
+    z-index: 0; /* Para que el contenedor de las imágenes de fondo esté detrás del contenido */
 }
 
-.background-image {
+.background-images .background-image {
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Para asegurarse de que la imagen cubra completamente el contenedor */
+    overflow: hidden; /* Asegura que el contenido adicional no salga del contenedor */
 }
+
+.background-images .background-image img {
+    display: block;
+    width: 100%; /* Ajusta el ancho de la imagen al contenedor */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    transition: transform 0.3s ease; /* Agrega una transición suave al efecto de movimiento */
+
+}
+
+.background-images .background-image img:hover {
+    transform: scale(1.1); /* Aplica un efecto de escala cuando el cursor pasa por encima */
+}
+
 
 .scroll {
     position: relative; /* Para asegurarse de que el contenido esté por encima de las imágenes de fondo */
     z-index: 1; /* Para asegurarse de que esté por encima del contenedor de imágenes de fondo */
+    background-color: transparent;
+    text-align: center;
+    margin: 0 22.5%;
+    margin-top: 30%;
+    margin-bottom: 4%;
+    min-height: 53vh;
+    max-height: 53vh; /* Altura máxima para permitir scroll interno */
+    overflow: auto; /* Permitir scroll interno */
+    padding: 0 10px;
 }
+
 
 .scroll .imagen img {
     display: block;
@@ -86,21 +122,17 @@ main {
     margin: 0 auto; /* Centra la imagen horizontalmente */
 }
 
-.content .scroll {
-    background-color: transparent;
-    text-align: center;
-    margin: 0 23.8%;
-    margin-top: 32%;
-    margin-bottom: 6%;
-    min-height: 50vh;
-    max-height: 50vh; /* Altura máxima para permitir scroll interno */
-    overflow: auto; /* Permitir scroll interno */
-    padding: 0 10px;
+#imagen_1 {
+    display: block;
+    width: 80%; /* Ajusta el ancho de la imagen al contenedor */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
 }
 
 .scroll nav ul li {
     text-align: left;
-    font-size: 13px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+
 }
 
 /* Estilo para que el texto de los enlaces sea negro */
@@ -125,14 +157,6 @@ main {
     border: 3px solid #e0e0e0; /* Espacio alrededor de la barra de desplazamiento */
 }
 
-.imagen img {
-    max-width: 85%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-
 
 /* Media Queries para diseño responsive */
 @media (max-width: 768px) {
@@ -146,7 +170,7 @@ main {
     }
 
     .scroll .title h1 {
-        font-size: 1.5rem;
+        font-size: 19px;
     }
 
     header {
@@ -156,7 +180,7 @@ main {
 
 @media (max-width: 480px) {
     .scroll .title h1 {
-        font-size: 1.2rem;
+        font-size: 15px;
     }
 }
 
@@ -194,15 +218,21 @@ h2 {
     color: black;
 }
 
-audio {
-    display: none;
-}
-
 p {
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 15px;
 }
 
+.audio {
+    display: none;
+}
+
+#audio {
+    width: 210px; /* Ajusta el ancho según tus necesidades */
+    height: 50px; /* Ajusta la altura según tus necesidades */
+    display: block;
+    margin: 40px auto; /* Centra el elemento horizontalmente */
+}
 
 
 /* Estilos de página partitura. */
