@@ -41,6 +41,7 @@ header nav ul li a button {
 
 /* Estilo para el contenido centrado */
 main {
+    z-index: 2; /* Asegura que el contenido esté por encima del PDF */
     padding: 0 26%;
     display: flex;
     justify-content: center;
@@ -48,7 +49,7 @@ main {
     min-height: 90vh;
 }
 
-main .content {
+.content {
     background-image: url("../Images/fondo1.png"), url("../Images/fondo2.png"); /* Dos imágenes de fondo */
     background-size: cover; /* Que la imagen de fondo ocupe todo el main */
     background-repeat: no-repeat; /* Que la imagen no se repita */
@@ -123,7 +124,6 @@ main .content {
     }
 }
 
-
 .two-columns {
     column-count: 2;
     column-gap: 20px; /* Ajusta el espacio entre las columnas según sea necesario */
@@ -162,28 +162,47 @@ p {
 
 
 
-
 /* Estilos de página partitura. */
-.partitura-container {
-    display: flex; /* Cambia el layout a flexbox */
-    align-items: center;
-    border: 1px solid rgb(23, 199, 170);
-    padding: 0 0;
+.main2 {
+    padding: 0 21%;
+    display: flex;
+    min-height: 92vh;
 }
 
-.partitura-container .content {
-    border: none;
-    min-height: 90vh;
-    margin: 0 1%;
+.content2 {
+    background-image: url("../Images/2.png"), url("../Images/1.png"); /* Dos imágenes de fondo */
+    background-size: cover; /* Que la imagen de fondo ocupe todo el main */
+    background-repeat: no-repeat; /* Que la imagen no se repita */
+    background-position: center; /* Centrar la imagen */
     width: 100%;
+    max-width: 1200px;
+}
+
+.partitura {
+    display: flex; /* Cambia el layout a flexbox */
+    margin-top: 33%;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 #pdf {
-    min-height: 89vh;
+    min-height: 50vh;
     width: 100%;
 }
 
 
+/* Estilizar el scroll en navegadores WebKit */
+.content .scroll::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+}
 
+.content .scroll::-webkit-scrollbar-track {
+    background: #e0e0e0; /* Color del fondo de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+}
 
-
+.content .scroll::-webkit-scrollbar-thumb {
+    background-color: #eccca4; /* Color de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 3px solid #e0e0e0; /* Espacio alrededor de la barra de desplazamiento */
+}
